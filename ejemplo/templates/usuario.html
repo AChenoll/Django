@@ -2,11 +2,29 @@
 
 {% block titulo %} Usuario {% endblock%}
 
+{% load static %}
+
+
 {% block cuerpo %}
 
 <p>Id: {{ id }} </p> 
 <p>Nombre: {{ nombre }} </p> 
 <p>Apellido 1: {{ apellido1 }}</p> 
 <p>Apellido 2: {{ apellido2 }}</p> 
+
+<p>La posicion 3 de la lista es: {{lista_numeros.3}}</p>
+
+<p>Estoy recibiendo: {{lista_numeros}}</p>
+
+<ul>
+    {% for n in lista_numeros %}
+    <li>{{n}}</li>
+    {% endfor %}
+</ul>
+
+
+<img src="{% static 'img/elNano.jpg' %}" alt="33">
+
+<p></p>
 
 {% endblock %}
